@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+#myVideo{
+    height: 775px;
+
+
+}
+
+.myVideoContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h3, h4, b {
+    text-align: center;
+    color: white;
+}

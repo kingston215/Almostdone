@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 0;
+    color: white !important;
+}
+
+.wine-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.wine-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+}
+
+.wine-card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.wine-card h3 {
+    margin: 10px 0 5px;
+}
+
+.wine-card p {
+    margin: 0;
+    color: white;
+}
+
+#myVideo{
+    height: 775px;
+
+
+}
+
+.myVideoContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
