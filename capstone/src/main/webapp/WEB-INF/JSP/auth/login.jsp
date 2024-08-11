@@ -2,7 +2,8 @@
 
 
 <div class="container">
-    <form id="signInForm" action="/login/loginSubmit">
+    <form id="signInForm" action="/auth/login/loginSubmit" method="post">
+        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         <h2>Sign In</h2>
         <div class="input-group">
             <label for="username">Username</label>
@@ -16,7 +17,7 @@
         <p id="errorMessage"></p>
     </form>
 </div>
-<script src="scripts.js"></script>
+<%--<script src="scripts.js"></script>--%>
 
 
 <jsp:include page="../Include/Footer.jsp"/>

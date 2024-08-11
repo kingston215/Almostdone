@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:include page="Include/Header.jsp"/>
 <section>
     <div class="row">
@@ -15,7 +16,29 @@
         </div>
     </div>
 </section>
+<section>
+    <div class="row justify-content-center">
 
+        <table class="table table-striped table-primary col col-5" >
+            <tr>
+                <th>Product Id</th>
+
+            </tr>
+
+            <c:forEach items="${foundProducts}" var="product">
+
+                <tr>
+                    <td>${product.id}</td>
+
+                </tr>
+
+            </c:forEach>
+
+
+        </table>
+
+    </div>
+</section>
 <jsp:include page="Include/Footer.jsp"/>
 
 

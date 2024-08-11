@@ -1,4 +1,4 @@
-package Security;
+package org.perscholas.capstone.Security;
 
 import org.perscholas.capstone.database.DAO.UserDAO;
 import org.perscholas.capstone.database.Entity.User;
@@ -46,7 +46,7 @@ public class AuthUtil {
             if (username == null) {
                 return null;
             }
-            user = UserDAO.findByEmailIgnoreCase(username);
+            user = userDAO.findByEmailIgnoreCase(username);
             return user;
         }
         public void manualAuthentication(HttpSession session, String username, String unencryptedPassword) {
