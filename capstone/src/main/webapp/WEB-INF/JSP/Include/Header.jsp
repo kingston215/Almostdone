@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="/public/CSS/header.css" >
     <link rel="stylesheet" href="/public/CSS/reservation.css">
     <link rel="stylesheet" href="/public/CSS/Events.css">
+    <link rel="stylesheet" href="/public/CSS/Menu.css">
+    <link rel="stylesheet" href="../../public/CSS/style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
@@ -33,9 +35,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/Menu">Menu</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Reservations">Reservations</a>
-                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="/PrivateEvents">Events</a>
                     </li>
@@ -47,10 +47,10 @@
                         <a class="nav-link" href="/auth/login">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/auth/create-account">Sign up</a>
+                        <a class="nav-link" href="/Reservations">Sign up</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/auth/login">Cart</a>
+                        <a class="nav-link" href="/search">Search</a>
                     </li>
 
                     <sec:authorize access="isAuthenticated()">

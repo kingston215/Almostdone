@@ -2,7 +2,7 @@ package org.perscholas.capstone.Service;
 
 
 
-import form.CreateAccountFormBean;
+import org.perscholas.capstone.form.CreateAccountFormBean;
 import lombok.extern.slf4j.*;
 import org.perscholas.capstone.database.DAO.UserDAO;
 import org.perscholas.capstone.database.Entity.User;

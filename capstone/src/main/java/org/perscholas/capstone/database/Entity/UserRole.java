@@ -1,21 +1,21 @@
-//package org.perscholas.capstone.database.Entity;
-//
-//import jakarta.persistence.*;
-//import lombok.AllArgsConstructor;
-//import lombok.Getter;
-//import lombok.NoArgsConstructor;
-//import lombok.Setter;
-//import lombok.ToString;
-//
-//import java.util.Date;
-//import java.util.List;
-//
-//@Setter
-//@Getter
-//@Entity
-//@ToString
-//@AllArgsConstructor
-//@NoArgsConstructor
+package org.perscholas.capstone.database.Entity;
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+import java.util.Date;
+import java.util.List;
+
+@Setter
+@Getter
+@Entity
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
 //@Table(name = "users") // Table name in lowercase
 //public class User {
 //
@@ -34,5 +34,18 @@
 //    @Temporal(TemporalType.TIMESTAMP)
 //    private Date createDate;
 //}
-//public class UserRole {
-//}
+
+@Table(name = "user_roles")
+public class UserRole {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Integer id;
+
+    @Column(name = "user_id")
+    private Integer userId;
+
+    @Column(name = "role_name")
+    private String roleName;
+}

@@ -4,6 +4,8 @@ package org.perscholas.capstone.database.Entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.Date;
+
 @Setter
 @Getter
 @Entity
@@ -11,7 +13,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "wines")
-public class Product {
+public class Wines {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,4 +33,7 @@ public class Product {
     private Double price;
 
 }
+
+
+
 

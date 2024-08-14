@@ -19,8 +19,8 @@ public class User {
     @Column(name = "id", nullable = false)
     private Integer id;
 
-    @Size(max = 45)
-    @Column(name = "age", length = 45)
+
+    @Column(name = "age")
     private Integer age;
 
     @Size(max = 45)

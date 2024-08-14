@@ -6,7 +6,7 @@ import lombok.Setter;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 import org.perscholas.capstone.Security.AuthUtil;
-import form.CreateAccountFormBean;
+import org.perscholas.capstone.form.CreateAccountFormBean;
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
 import org.perscholas.capstone.Service.UserServicetwo;
@@ -23,9 +23,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.List;
-
-import static org.hibernate.query.sqm.tree.SqmNode.log;
 @Getter
 @Setter
 @ToString
@@ -34,11 +31,12 @@ import static org.hibernate.query.sqm.tree.SqmNode.log;
 @RequestMapping("/auth")
 public class LoginController {
     @Autowired
-private AuthUtil authutil;
+    private AuthUtil authutil;
     @Autowired
     private UserServicetwo userServicetwo;
     @Autowired
     private UserDAO userDao;
+
     @GetMapping("/login")
     ModelAndView index(@RequestParam(required = false) String error) {
         ModelAndView response = new ModelAndView("auth/login");
@@ -53,6 +51,7 @@ private AuthUtil authutil;
         log.debug("${users}");
         response.addObject("user", user);
         return response;    }
+
     @GetMapping("/create-account")
     public ModelAndView createAccount() {
         ModelAndView response = new ModelAndView("auth/CreateAccount");

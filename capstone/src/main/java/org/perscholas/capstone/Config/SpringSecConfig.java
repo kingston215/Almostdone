@@ -97,7 +97,7 @@ public class SpringSecConfig {
         http.formLogin(formLogin -> formLogin
                 // this a controller method URL for displaying the login page
                 // we built this controller method, however this is just the URL in the browser for the login page
-                .loginPage("/account/loginPageUrl")
+                .loginPage("/auth/login")
 
 
                 // this URL is part of spring security and we do not need to implement it in our controller
@@ -107,14 +107,14 @@ public class SpringSecConfig {
                 // 1) action needs to be set to /account/loginProcessingURL
                 // 2) input field for username needs to be named "username"
                 // 3) input field for password needs to be named "password"
-                .loginProcessingUrl("/account/loginProcessingURL"));
+                .loginProcessingUrl("/auth/login"));
 
 
         http.logout(formLogout -> formLogout
                 .invalidateHttpSession(true)
                 // this is the URL that will log a user out
                 // this is another URL that is included with spring security - we do not have a controller method for this
-                .logoutUrl("/account/logout")
+                .logoutUrl("/auth/logout")
                 // after spring loggs the user out then it will goto this URL
                 .logoutSuccessUrl("/"));
 

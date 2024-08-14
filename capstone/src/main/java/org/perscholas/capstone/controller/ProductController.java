@@ -1,9 +1,9 @@
 package org.perscholas.capstone.controller;
-import form.CreateAccountFormBean;
+import org.perscholas.capstone.form.CreateAccountFormBean;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.perscholas.capstone.database.DAO.ProductDAO;
-import org.perscholas.capstone.database.Entity.Product;
+import org.perscholas.capstone.database.Entity.Wines;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -44,7 +44,7 @@ public class ProductController {
     @GetMapping("/search")
     ModelAndView search (@RequestParam(required = false) String searchterm){
         ModelAndView response = new ModelAndView("SearchBar");
-        List<Product> foundProducts = productDao.findByNameOrCode(searchterm);
+        List<Wines> foundProducts = productDao.findByNameOrCode(searchterm);
         response.addObject("foundProducts", foundProducts);
         return response;
     }

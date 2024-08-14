@@ -2,7 +2,7 @@
 
 
 <div class="container">
-    <form id="signInForm" action="/auth/login/loginSubmit" method="post">
+    <form id="signInForm" action="/auth/login" method="post">
         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         <h2>Sign In</h2>
         <div class="input-group">
